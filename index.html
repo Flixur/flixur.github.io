@@ -19,21 +19,46 @@
                 border-bottom: 5px solid;
             }
             .dimensions {
-                width: 183px;
-                height: 188px;
+                height: 100vh;
+                width: 100vw;
             }
             .center {
-                top: 50%;
-                left: 50%;
-                margin-top: -94px;
-                margin-left: -91px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .center_content {
+                text-align: center;
+            }
+            .animate:hover {
+                animation: animate_in 5s forwards;
+                font-size: 76px;
+            }
+            .animate {
+                animation: animate_out 5s forwards;
+            }
+            @keyframes animate_in {
+                from {
+                    font-size: 72px;
+                }
+                to {
+                    font-size: 76px;
+                }
+            }
+            @keyframes animate_out {
+                from {
+                    font-size: 76px;
+                }
+                to {
+                    font-size: 72px;
+                }
             }
         </style>
     </head>
     <body>
         <div class="content center_parent">
-            <div class="font center fixed dimensions">
-                <h1 class="border">Flixur</h1>
+            <div class="font center fixed dimensions center_content">
+                <h1 class="border animate">Flixur</h1>
             </div>
         </div>
     </body>
